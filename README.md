@@ -1,49 +1,61 @@
-# Harmful Brain Activity Classification using Deep Learning
+# Harmful Brain Activity Classification Using Deep Learning
 
-This repository contains a deep learning-based system for classifying harmful brain activities using EEG (Electroencephalography) data. The goal is to assist medical professionals in detecting abnormal brain patterns such as seizures and discharges with greater speed and accuracy.
+This repository provides a deep learning system for automated classification of harmful brain activities based on EEG (Electroencephalography) data. The objective is to support medical professionals by improving the speed and accuracy of EEG interpretation, particularly for critically ill patients.
 
-## Project Summary
+---
 
-EEG is widely used to monitor the electrical activity of the brain, especially in critically ill patients. However, interpreting EEG signals manually is time-consuming and prone to human error. This project introduces an automated approach using deep learning to classify various harmful EEG patterns with competitive performance.
+## Overview
+
+Manual interpretation of EEG signals is time-consuming and susceptible to human error. This project leverages state-of-the-art deep learning and data processing techniques to automate the detection and classification of abnormal brain activities, thereby assisting neurologists in clinical decision-making.
+
+---
 
 ## Objectives
 
-- Automate the classification of harmful brain activities using EEG data.
-- Reduce diagnostic time and support neurologists in critical care settings.
-- Improve accuracy using spectrogram transformation and deep learning techniques.
+- **Automated Detection**: Classify harmful brain activities using EEG data.
+- **Clinical Support**: Reduce diagnostic time and assist neurologists in critical care.
+- **Enhanced Accuracy**: Utilize spectrogram transformation and advanced deep learning architectures.
 
-## Target Classes
+---
 
-The model classifies EEG activity into six categories:
+## Classification Categories
 
-- Seizure (SZ)
-- Generalized Periodic Discharges (GPD)
-- Lateralized Periodic Discharges (LPD)
-- Lateralized Rhythmic Delta Activity (LRDA)
-- Generalized Rhythmic Delta Activity (GRDA)
-- Other
+The model identifies six categories of EEG activity:
 
-## Technologies Used
+1. **Seizure (SZ)**
+2. **Generalized Periodic Discharges (GPD)**
+3. **Lateralized Periodic Discharges (LPD)**
+4. **Lateralized Rhythmic Delta Activity (LRDA)**
+5. **Generalized Rhythmic Delta Activity (GRDA)**
+6. **Other**
 
-| Category         | Tools & Libraries                          |
-|------------------|---------------------------------------------|
-| Language         | Python                                      |
-| Deep Learning    | TensorFlow, Keras, KerasCV                  |
-| Data Processing  | NumPy, Pandas, Parquet                      |
-| Visualization    | Matplotlib                                  |
-| Deployment       | Streamlit                                   |
-| Training Platform| Kaggle (free GPU resources)                 |
+---
+
+## Technologies & Tools
+
+| Category          | Tools & Libraries                        |
+|-------------------|------------------------------------------|
+| Programming       | Python                                   |
+| Deep Learning     | TensorFlow, Keras, KerasCV               |
+| Data Processing   | NumPy, Pandas, Parquet                   |
+| Visualization     | Matplotlib                               |
+| Deployment        | Streamlit                                |
+| Training Platform | Kaggle (GPU resources)                   |
+
+---
 
 ## Model Architecture
 
-- Base Model: EfficientNetV2-B2 (pretrained on ImageNet)
-- Input Format: EEG spectrogram images (400x300x3)
-- Loss Function: Kullback-Leibler (KL) Divergence
-- Data Split: Stratified K-Fold Cross Validation
-- Augmentation: MixUp, RandomCutout
-- Feature Reduction: PCA (Principal Component Analysis)
+- **Base Model**: EfficientNetV2-B2 (pretrained on ImageNet)
+- **Input Format**: EEG spectrogram images (`400x300x3`)
+- **Loss Function**: Kullback-Leibler (KL) Divergence
+- **Validation**: Stratified K-Fold Cross Validation
+- **Augmentation**: MixUp, RandomCutout
+- **Feature Reduction**: Principal Component Analysis (PCA)
 
-## Evaluation Metrics
+---
+
+## Performance Metrics
 
 | Metric    | Value     |
 |-----------|-----------|
@@ -53,37 +65,53 @@ The model classifies EEG activity into six categories:
 | F1 Score  | 70.03%    |
 | AUC       | 0.8981    |
 
+---
+
 ## Dataset
 
-- Source: Harvard Medical School
-- Format: Parquet
-- Type: EEG recordings from critically ill patients
-- Preprocessing: Normalization, noise filtering, spectrogram conversion
+- **Source**: Harvard Medical School
+- **Format**: Parquet
+- **Type**: EEG recordings from critically ill patients
+- **Preprocessing**: Normalization, noise filtering, spectrogram conversion
 
-> ⚠️ Dataset not included due to licensing and privacy constraints.
+> **Note:** The dataset is excluded from this repository due to licensing and privacy constraints.
+
+---
 
 ## Getting Started
 
 ### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/harmful-brain-activity-classification.git
-cd harmful-brain-activity-classification
 
-Project Structure
-📁 harmful-brain-activity-classification/
+```bash
+git clone https://github.com/Baderaljobery/Classifing-Harmful-Brain-Activity.git
+cd Classifing-Harmful-Brain-Activity
+```
+
+### 2. Project Structure
+
+```
+Classifing-Harmful-Brain-Activity/
 │
-├── app.py                 # Streamlit app for model prediction
-├── train.py               # Training script (optional)
+├── app.py                 # Streamlit app for model predictions
+├── train.py               # Training script
 ├── best_model.keras       # Trained model file
 ├── requirements.txt       # Python dependencies
 ├── README.md              # Project documentation
-└── /data/                 # (Excluded) EEG spectrogram files
-Authors
+└── data/                  # (Excluded) EEG spectrogram files
+```
 
-Bader Abdulaziz Aldhahi
+---
 
-Bader Hubaytir Aljubayri
+## Authors
 
-Mohammed Abdullah Aldukhayel
+- **Bader Abdulaziz Aldhahi**
+- **Bader Hubaytir Aljubayri**
+- **Mohammed Abdullah Aldukhayel**
 
-Supervised by: Dr. Mohd Anul Haq
+**Supervised by:** Dr. Mohd Anul Haq
+
+---
+
+## License
+
+This project is for academic and research purposes. Please refer to the repository for licensing details.
