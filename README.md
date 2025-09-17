@@ -68,3 +68,22 @@ The model classifies EEG activity into six categories:
 ```bash
 git clone https://github.com/your-username/harmful-brain-activity-classification.git
 cd harmful-brain-activity-classification
+
+Project Structure
+📁 harmful-brain-activity-classification/
+│
+├── app.py                 # Streamlit app for model prediction
+├── train.py               # Training script (optional)
+├── best_model.keras       # Trained model file
+├── requirements.txt       # Python dependencies
+├── README.md              # Project documentation
+└── /data/                 # (Excluded) EEG spectrogram files
+Authors
+
+Bader Abdulaziz Aldhahi
+
+Bader Hubaytir Aljubayri
+
+Mohammed Abdullah Aldukhayel
+
+Supervised by: Dr. Mohd Anul Haq
