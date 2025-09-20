@@ -57,13 +57,13 @@ The model identifies six categories of EEG activity:
 
 ## Performance Metrics
 
-| Metric    | Value     |
-|-----------|-----------|
-| Accuracy  | 70.44%    |
-| Precision | 70.31%    |
-| Recall    | 70.44%    |
-| F1 Score  | 70.03%    |
-| AUC       | 0.8981    |
+| Metric    | 
+|-----------|
+| Accuracy  | 
+| Precision | 
+| Recall    | 
+| F1 Score  | 
+| AUC       |
 
 ---
 
@@ -114,4 +114,4 @@ Classifing-Harmful-Brain-Activity/
 
 ## License
 
-This project is for academic and research purposes. Please refer to the repository for licensing details.
+This project is for academic and research purposes.
